@@ -52,7 +52,7 @@ async function bubblesort(arr:number[]){
             await sleep(delay);
             createBars(arr, i-1, i);
             if (arr[i-1]>arr[i]) {
-                await swap(arr, i-1, i);
+                swap(arr, i-1, i);
                 swapped = true;
                 
             }
@@ -62,7 +62,7 @@ async function bubblesort(arr:number[]){
     createBars(arr);
 }
 
-async function swap(arr:number[], x1:number, x2:number){
+function swap(arr:number[], x1:number, x2:number){
     const temp = arr[x2];
     arr[x2] = arr[x1];
     arr[x1] = temp;
