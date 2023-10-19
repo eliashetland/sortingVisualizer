@@ -36,7 +36,7 @@ function createBars(arr:number[], currentBar1?:number, currentBar2?:number){
             bar.classList.add("bar");
         }
 
-        bar.style.height = `${arr[i]/arrSize}%`;
+        bar.style.height = `${100*arr[i]/arrSize}%`;
         bar.style.width = `${width}%`
         barDiv.appendChild(bar);   
     }
