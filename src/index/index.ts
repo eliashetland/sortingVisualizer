@@ -16,8 +16,10 @@ startBtn.onclick = ()=>bubblesort(arr);
 function createArray(size:number){
     let arr:number[] = [];
     for (let i = 0; i < size; i++) {
-        arr.push(Math.floor(Math.random()*100));
+        arr.push(i);
     }
+    arr.sort(()=>{Math.random() - 0.5})
+
     createBars(arr);
     return arr;
 }
@@ -34,7 +36,7 @@ function createBars(arr:number[], currentBar1?:number, currentBar2?:number){
             bar.classList.add("bar");
         }
 
-        bar.style.height = `${arr[i]}%`;
+        bar.style.height = `${arr[i]/arrSize}%`;
         bar.style.width = `${width}%`
         barDiv.appendChild(bar);   
     }
