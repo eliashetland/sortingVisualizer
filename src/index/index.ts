@@ -18,7 +18,7 @@ function createArray(size:number){
     for (let i = 0; i < size; i++) {
         arr.push(i);
     }
-    arr.sort(()=>{Math.random() - 0.5})
+    arr.sort((a, b)=>{Math.random() - 0.5})
 
     createBars(arr);
     return arr;
